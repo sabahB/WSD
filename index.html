@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UX & Web Development Lab Activities</title>
+  <title>UX & Web Development Weekly Lab Worksheets</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,282 +15,596 @@
   <header class="site-header">
     <div class="container">
       <span class="badge">Web Development & UX Module</span>
-      <h1>Weekly UX Lab Activities</h1>
-      <p>Interactive student worksheets and workshop activities for user-centred research and web design.</p>
+      <h1>Weekly UX Lab Worksheets</h1>
+      <p>Interactive student worksheets, research frameworks, and step-by-step workshop guides.</p>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <div class="container layout-wrapper">
+  <div class="container">
 
-    <!-- Sidebar Directory / Week Selector -->
-    <aside class="sidebar">
-      <div class="sidebar-card">
-        <h3>📅 Module Directory</h3>
-        <nav class="week-nav">
-          <a href="#week1" class="nav-btn active"><span>Week 1:</span> UX Detective</a>
-          <a href="#week2" class="nav-btn"><span>Week 2:</span> Research Practice</a>
-          <a href="#week3" class="nav-btn"><span>Week 3:</span> Competitor Analysis</a>
-          <a href="#week4" class="nav-btn"><span>Week 4:</span> Synthesis & Personas</a>
-          <div class="future-weeks">
-            <span class="nav-btn disabled"><span>Week 5:</span> Coming Soon</span>
-            <span class="nav-btn disabled"><span>Week 6:</span> Coming Soon</span>
-            <span class="nav-btn disabled"><span>Week 7–10:</span> Future Modules</span>
+    <!-- Top Tab Navigation Bar -->
+    <nav class="tab-navigation" aria-label="Weekly Activities">
+      <button class="tab-btn active" data-tab="week1">Week 1: UX Detective</button>
+      <button class="tab-btn" data-tab="week2">Week 2: Research Practice</button>
+      <button class="tab-btn" data-tab="week3">Week 3: Competitor Audit</button>
+      <button class="tab-btn" data-tab="week4">Week 4: Synthesis & Personas</button>
+      <button class="tab-btn disabled" disabled>Week 5 (Soon)</button>
+      <button class="tab-btn disabled" disabled>Week 6 (Soon)</button>
+      <button class="tab-btn disabled" disabled>Weeks 7–10</button>
+    </nav>
+
+    <!-- TAB CONTENTS STREAM -->
+    <main class="tab-content-wrapper">
+
+      <!-- ===================================================================
+           WEEK 1 TAB CONTENT
+           =================================================================== -->
+      <section id="week1" class="tab-panel active">
+        <div class="activity-card">
+          <div class="activity-header">
+            <div class="meta-row">
+              <span class="week-tag">Week 1</span>
+              <span class="duration-tag">⏱️ 47 Minutes Total</span>
+              <span class="format-tag">👥 Group Exercise (4 Students)</span>
+            </div>
+            <h2>Activity: "UX Detective"</h2>
+            <p class="goal-box">🎯 <strong>Goal:</strong> Identify and analyse frustrating digital experiences using User-Centred Design (UCD) thinking. The aim is to understand the problem rather than design a solution.</p>
           </div>
-        </nav>
-      </div>
-    </aside>
 
-    <!-- Main Content Stream -->
-    <main class="content-area">
+          <!-- Detailed Step-by-Step Instructions -->
+          <div class="instruction-steps">
+            <h3>📋 Step-by-Step Activity Instructions</h3>
 
-      <!-- ==========================================
-           WEEK 1 ACTIVITY CARD
-           ========================================== -->
-      <article id="week1" class="activity-card">
-        <div class="activity-header">
-          <div class="meta-row">
-            <span class="week-tag">Week 1</span>
-            <span class="duration-tag">⏱️ 47 Mins</span>
-            <span class="format-tag">👥 Group Exercise</span>
+            <div class="step-card">
+              <div class="step-title">
+                <span class="step-badge">Step 1</span>
+                <h4>Individual Reflection — 5 min</h4>
+              </div>
+              <p>Think of a website or app that frustrated you recently. Ask yourself: <em>What happened? What made the experience difficult?</em></p>
+              <div class="examples-box">
+                <strong>💡 Examples of Digital Frustrations:</strong>
+                <ul>
+                  <li>Couldn't find the "Contact" page.</li>
+                  <li>Checkout process was confusing.</li>
+                  <li>Too many pop-ups blocking the screen.</li>
+                  <li>Navigation menu was unclear or missing key categories.</li>
+                  <li>Couldn't understand what to do next.</li>
+                  <li>Important information (like return policy or fees) was hidden.</li>
+                </ul>
+              </div>
+              <p><strong>Action:</strong> Write your specific example on a sticky note or in your notes.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-title">
+                <span class="step-badge">Step 2</span>
+                <h4>Share & Select — 10 min</h4>
+              </div>
+              <p>In groups of 4:</p>
+              <ol>
+                <li>Share your individual examples with your group members.</li>
+                <li>Choose <strong>one frustration</strong> that your group finds most interesting to investigate.</li>
+                <li>Write the problem as a short statement.</li>
+              </ol>
+              <div class="example-callout">
+                <strong>Example Problem Statement:</strong> <em>"Users struggle to find the return policy on an online shop."</em><br>
+                <span class="warning-text">⚠️ Note: Avoid suggesting a solution at this stage! Focus entirely on defining the friction.</span>
+              </div>
+            </div>
+
+            <div class="step-card">
+              <div class="step-title">
+                <span class="step-badge">Step 3</span>
+                <h4>Be a UX Detective — 12 min</h4>
+              </div>
+              <p>Investigate the problem deeply from the user's perspective by answering the 5 UX Detective Questions:</p>
+              <ul class="detective-list">
+                <li><strong>WHO?</strong> Who is experiencing the problem?</li>
+                <li><strong>WHAT?</strong> What are they trying to do? (Their core goal)</li>
+                <li><strong>WHERE?</strong> Where in the experience does the problem occur?</li>
+                <li><strong>WHY?</strong> Why might this be difficult?</li>
+                <li><strong>IMPACT?</strong> What happens when the user cannot complete the task easily?</li>
+              </ul>
+
+              <div class="worked-example">
+                <h5>🔍 Worked Example Case Study:</h5>
+                <ul>
+                  <li><strong>User:</strong> Online shopper buying clothes</li>
+                  <li><strong>Goal:</strong> Return a product that doesn't fit</li>
+                  <li><strong>Problem:</strong> Cannot easily find return policy or instructions on the website</li>
+                  <li><strong>Impact:</strong> Frustration, wasted time, lost trust, and potentially abandoning the purchase entirely</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="step-card">
+              <div class="step-title">
+                <span class="step-badge">Step 4</span>
+                <h4>What Would You Need to Know? — 10 min</h4>
+              </div>
+              <p>We think this is a problem—but how could we find out whether it really is? Identify <strong>3 research questions</strong> you would want to investigate to gather evidence.</p>
+              <div class="examples-box">
+                <strong>💡 Guidance Questions to Ask:</strong>
+                <ul>
+                  <li>Do other users have the same problem?</li>
+                  <li>How do users currently look for this information?</li>
+                  <li>Which terminology or button labels do users actually understand?</li>
+                  <li>How long does it take users to complete the task?</li>
+                  <li>Where on the page do users become confused or click wrongly?</li>
+                </ul>
+              </div>
+              <p><strong>Action:</strong> Put yourself in the user's shoes and draft answers to your selected questions based on your team's hypotheses.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-title">
+                <span class="step-badge">Step 5</span>
+                <h4>Quick Share — 10 min</h4>
+              </div>
+              <p>Each group presents a 1-minute summary using this exact structure:</p>
+              <div class="presentation-script">
+                <p>• <strong>Our problem:</strong> [Describe the issue]</p>
+                <p>• <strong>Our user:</strong> [Describe the user group]</p>
+                <p>• <strong>The user's goal:</strong> [What were they trying to accomplish?]</p>
+                <p>• <strong>What we don't know:</strong> [Key unknowns or assumptions]</p>
+                <p>• <strong>How we could investigate it:</strong> [Research approach]</p>
+              </div>
+            </div>
           </div>
-          <h2>Activity: UX Detective</h2>
-          <p class="goal-text">🎯 <strong>Goal:</strong> Identify and analyse frustrating digital experiences using User-Centred Design (UCD) thinking. The aim is to understand the problem rather than design a solution.</p>
+
+          <!-- Fillable Worksheet Template -->
+          <div class="worksheet-section">
+            <div class="worksheet-header">
+              <h3>📝 Student Group Worksheet (Week 1)</h3>
+              <p>Fill in this template during your group workshop session.</p>
+            </div>
+
+            <div class="form-group">
+              <label>Group Problem Statement (No solutions allowed):</label>
+              <textarea placeholder="e.g., Users struggle to find the return policy on an online fashion shop."></textarea>
+            </div>
+
+            <div class="detective-grid">
+              <div class="form-group">
+                <label>WHO is experiencing this?</label>
+                <textarea placeholder="Define the target user..."></textarea>
+              </div>
+              <div class="form-group">
+                <label>WHAT are they trying to do?</label>
+                <textarea placeholder="Define their core goal..."></textarea>
+              </div>
+              <div class="form-group">
+                <label>WHERE does this happen?</label>
+                <textarea placeholder="Which page, screen, or step?"></textarea>
+              </div>
+              <div class="form-group">
+                <label>WHY is it difficult?</label>
+                <textarea placeholder="Root cause of the friction..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>IMPACT on User & Business:</label>
+              <textarea placeholder="What happens when they fail? (e.g., abandonment, anger)..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>3 Research Questions We Would Investigate:</label>
+              <input type="text" class="form-input" placeholder="1. Do other users look for this in the footer or main navigation?">
+              <input type="text" class="form-input" placeholder="2. What terms do users search for when attempting a return?">
+              <input type="text" class="form-input" placeholder="3. How many clicks does it currently take to reach the policy?">
+            </div>
+          </div>
         </div>
+      </section>
 
-        <section class="timeline-section">
-          <h3>⏱️ Workshop Breakdown</h3>
-          <div class="timeline-grid">
+
+      <!-- ===================================================================
+           WEEK 2 TAB CONTENT
+           =================================================================== -->
+      <section id="week2" class="tab-panel">
+        <div class="activity-card">
+          <div class="activity-header">
+            <div class="meta-row">
+              <span class="week-tag">Week 2</span>
+              <span class="duration-tag">⏱️ 50 Minutes Total</span>
+              <span class="format-tag">👥 Group & Peer Exercise</span>
+            </div>
+            <h2>Activity: Research Practice</h2>
+          </div>
+
+          <div class="scenario-box">
+            <h3>📍 Challenge Scenario</h3>
+            <p>You are designing a booking and membership website for a local fitness studio catering specifically to <strong>beginners</strong>.</p>
+            <p>Your task is to understand the needs, concerns, and expectations of beginner customers before designing the website.</p>
+          </div>
+
+          <!-- 50 Min Workshop Facilitation Guide -->
+          <div class="timeline-container">
+            <h3>⏱️ 50-Minute Workshop Facilitation Guide</h3>
+            <div class="timeline-list">
+              
+              <div class="time-block">
+                <div class="time-header">
+                  <span class="time-badge">0–5 min</span>
+                  <h4>Understand the Scenario</h4>
+                </div>
+                <p>Read the scenario together. Ask the class: <em>Who are the users? What might be different about a beginner compared with an experienced gym user?</em></p>
+                <p>Let students suggest possibilities. Do not confirm all their answers—tell them: <strong>"Some of these are assumptions. Our job is to investigate them."</strong></p>
+              </div>
+
+              <div class="time-block">
+                <div class="time-header">
+                  <span class="time-badge">5–10 min</span>
+                  <h4>What Do We Need to Know?</h4>
+                </div>
+                <p>As a class, identify possible research questions. Explain that a research question tells us what we need to find out.</p>
+                <div class="examples-box">
+                  <strong>💡 Example Research Questions:</strong>
+                  <ul>
+                    <li>What concerns do beginners have about joining a fitness studio?</li>
+                    <li>What information would help someone decide whether to book a class?</li>
+                    <li>What information do beginners want before attending their first session?</li>
+                    <li>What might make someone feel more comfortable joining?</li>
+                    <li>What types of classes might appeal to beginners?</li>
+                    <li>What information do existing fitness studios provide?</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="time-block">
+                <div class="time-header">
+                  <span class="time-badge">10–25 min</span>
+                  <h4>Secondary Research Sprint</h4>
+                </div>
+                <p>In groups, students search for information using reliable online sources. Give this instruction: <em>"Find at least two useful sources that help answer one or more of our research questions."</em></p>
+                <p><strong>Permitted Reliable Sources:</strong> NHS, Government health portals, Academic research, Professional sports/health organisations, Fitness industry publications, and Existing fitness studio websites.</p>
+              </div>
+
+              <div class="time-block">
+                <div class="time-header">
+                  <span class="time-badge">25–35 min</span>
+                  <h4>Analyse the Findings (Finding $\rightarrow$ Insight $\rightarrow$ Implication)</h4>
+                </div>
+                <p>Stop searching. Ask each group: <em>What does this information tell us about beginner users? What might this mean for the service or website?</em></p>
+                <p>This is the crucial step: Moving from <strong>Information $\rightarrow$ Finding $\rightarrow$ Insight $\rightarrow$ Possible Design Implication</strong>.</p>
+              </div>
+
+              <div class="time-block">
+                <div class="time-header">
+                  <span class="time-badge">35–45 min</span>
+                  <h4>Classmate Research (Primary Test)</h4>
+                </div>
+                <p>Each group writes 3 short questions based on what they discovered and polls their classmates to test assumptions.</p>
+                <div class="examples-box">
+                  <strong>💡 Example Primary Questions:</strong>
+                  <ul>
+                    <li>Have you ever joined a gym or fitness class?</li>
+                    <li>What information would you want to know before attending a class for the first time?</li>
+                    <li>What would make you feel more comfortable trying a new fitness class?</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="time-block">
+                <div class="time-header">
+                  <span class="time-badge">45–50 min</span>
+                  <h4>Share the Insight</h4>
+                </div>
+                <p>Each group gives one finding using the format: <em>"We found that..."</em> and <em>"This could mean that..."</em></p>
+                <div class="example-callout">
+                  <strong>Example Share:</strong><br>
+                  • <em>"We found that beginners can feel uncertain about what to expect from a new fitness class."</em><br>
+                  • <em>"This could mean that the website should clearly explain what happens during a first session."</em>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Complete Fillable Worksheet Template -->
+          <div class="worksheet-section">
+            <div class="worksheet-header">
+              <h3>📝 Week 2 Student Worksheet Template</h3>
+              <p>Complete Parts 1 through 5 with your group.</p>
+            </div>
+
+            <!-- Part 1 -->
+            <div class="worksheet-part">
+              <h4>Part 1 – What do we need to know?</h4>
+              <p>Write 3–5 research questions:</p>
+              <input type="text" class="form-input" placeholder="Question 1">
+              <input type="text" class="form-input" placeholder="Question 2">
+              <input type="text" class="form-input" placeholder="Question 3">
+              <input type="text" class="form-input" placeholder="Question 4">
+              <input type="text" class="form-input" placeholder="Question 5">
+            </div>
+
+            <!-- Part 2 -->
+            <div class="worksheet-part">
+              <h4>Part 2 – Secondary research</h4>
+              <p>Find useful information from existing published sources.</p>
+
+              <div class="checklist-box">
+                <strong>✔️ Check your sources! Before using information, ask:</strong>
+                <ul>
+                  <li>Who produced the information? Is the source credible?</li>
+                  <li>Is it recent enough and relevant to our topic?</li>
+                  <li>Does it actually help answer our research question?</li>
+                </ul>
+              </div>
+
+              <div class="table-responsive">
+                <table class="activity-table">
+                  <thead>
+                    <tr>
+                      <th style="width:25%;">Research Question</th>
+                      <th style="width:25%;">Source</th>
+                      <th style="width:25%;">Key Finding</th>
+                      <th style="width:25%;">Why is it useful?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><textarea placeholder="Question answered..."></textarea></td>
+                      <td><textarea placeholder="e.g., NHS Health Article"></textarea></td>
+                      <td><textarea placeholder="What did you find?"></textarea></td>
+                      <td><textarea placeholder="Why it helps..."></textarea></td>
+                    </tr>
+                    <tr>
+                      <td><textarea placeholder="Question answered..."></textarea></td>
+                      <td><textarea placeholder="Source..."></textarea></td>
+                      <td><textarea placeholder="Key finding..."></textarea></td>
+                      <td><textarea placeholder="Why it helps..."></textarea></td>
+                    </tr>
+                    <tr>
+                      <td><textarea placeholder="Question answered..."></textarea></td>
+                      <td><textarea placeholder="Source..."></textarea></td>
+                      <td><textarea placeholder="Key finding..."></textarea></td>
+                      <td><textarea placeholder="Why it helps..."></textarea></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Part 3 -->
+            <div class="worksheet-part">
+              <h4>Part 3 – From finding to insight</h4>
+              <p>Choose one of your findings and translate it into a design recommendation.</p>
+
+              <div class="example-callout">
+                <strong>💡 Worked Example:</strong><br>
+                • <strong>Finding:</strong> Beginners may be uncertain about what to expect when attending a new fitness class.<br>
+                • <strong>Insight:</strong> New customers need reassurance and clear information before booking.<br>
+                • <strong>Possible design implication:</strong> The website could clearly explain the class, difficulty level, instructor, what happens during the session, and what customers should bring.
+              </div>
+
+              <div class="table-responsive">
+                <table class="activity-table">
+                  <thead>
+                    <tr>
+                      <th>What did we find?</th>
+                      <th>What does this tell us about the users?</th>
+                      <th>What might this mean for the service or website?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><textarea placeholder="Enter raw secondary finding..."></textarea></td>
+                      <td><textarea placeholder="Underlying user psychological/practical need..."></textarea></td>
+                      <td><textarea placeholder="Website feature or layout decision..."></textarea></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Part 4 -->
+            <div class="worksheet-part">
+              <h4>Part 4 – Ask our classmates</h4>
+              <p>Based on your research, write three questions that you could ask classmates, then record responses.</p>
+              
+              <div class="table-responsive">
+                <table class="activity-table">
+                  <thead>
+                    <tr>
+                      <th style="width:40%;">Question</th>
+                      <th style="width:60%;">What did people tell us?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><textarea placeholder="Question 1..."></textarea></td>
+                      <td><textarea placeholder="Classmate responses..."></textarea></td>
+                    </tr>
+                    <tr>
+                      <td><textarea placeholder="Question 2..."></textarea></td>
+                      <td><textarea placeholder="Classmate responses..."></textarea></td>
+                    </tr>
+                    <tr>
+                      <td><textarea placeholder="Question 3..."></textarea></td>
+                      <td><textarea placeholder="Classmate responses..."></textarea></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Part 5 -->
+            <div class="worksheet-part">
+              <h4>Part 5 – What did we learn?</h4>
+              <div class="reflection-grid">
+                <div class="form-group">
+                  <label>1. One important finding from secondary research:</label>
+                  <textarea placeholder="Key finding..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label>2. One interesting response from our classmates:</label>
+                  <textarea placeholder="Key response..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label>3. One thing we did not expect:</label>
+                  <textarea placeholder="Unexpected finding..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label>4. One thing we would want to investigate further:</label>
+                  <textarea placeholder="Next research topic..."></textarea>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ===================================================================
+           WEEK 3 TAB CONTENT
+           =================================================================== -->
+      <section id="week3" class="tab-panel">
+        <div class="activity-card">
+          <div class="activity-header">
+            <div class="meta-row">
+              <span class="week-tag">Week 3</span>
+              <span class="duration-tag">⏱️ 50 Minutes</span>
+              <span class="format-tag">💻 Secondary Research & UX Audit</span>
+            </div>
+            <h2>Activity: Competitor Benchmarking & UI Auditing</h2>
+            <p class="goal-box">🎯 <strong>Goal:</strong> Evaluate how existing fitness studios onboard beginners online, identifying successful UI patterns and UX gaps to inform your own design decisions.</p>
+          </div>
+
+          <div class="instruction-steps">
+            <h3>📋 Activity Instructions</h3>
+            <p>Select 2 existing fitness studio websites (one large national chain, one local independent studio). Audit their websites through the eyes of a first-time beginner user.</p>
+            <div class="examples-box">
+              <strong>💡 Key Audit Criteria to Look For:</strong>
+              <ul>
+                <li><strong>First Impression:</strong> Does the homepage feel welcoming to beginners, or is it filled with intimidating fitness jargon and elite athletes?</li>
+                <li><strong>Pricing Clarity:</strong> Can you find membership costs in under 30 seconds without submitting personal contact info?</li>
+                <li><strong>Class Descriptions:</strong> Do they explain what to wear, bring, and expect during a first session?</li>
+                <li><strong>Booking Flow:</strong> How many steps does it take to register for a trial class?</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fillable Audit Worksheet -->
+          <div class="worksheet-section">
+            <div class="worksheet-header">
+              <h3>📝 Competitor Audit Matrix</h3>
+            </div>
             
-            <div class="timeline-step">
-              <span class="step-num">1</span>
-              <div>
-                <strong>00:00 - 05:00 — Individual Reflection</strong>
-                <p>Think of a website or app that frustrated you recently (e.g., hard-to-find contact page, confusing checkout, unclear navigation). Write it on a sticky note.</p>
+            <div class="table-responsive">
+              <table class="activity-table">
+                <thead>
+                  <tr>
+                    <th style="width:20%;">Evaluation Metric</th>
+                    <th style="width:40%;">Competitor A (Name & URL)</th>
+                    <th style="width:40%;">Competitor B (Name & URL)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Website Name & Target Audience</strong></td>
+                    <td><textarea placeholder="Name & URL..."></textarea></td>
+                    <td><textarea placeholder="Name & URL..."></textarea></td>
+                  </tr>
+                  <tr>
+                    <td><strong>First Impression / Imagery</strong><br><small>Does it cater to beginners?</small></td>
+                    <td><textarea placeholder="Observations on photos, messaging, tone..."></textarea></td>
+                    <td><textarea placeholder="Observations on photos, messaging, tone..."></textarea></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pricing & Membership Transparency</strong></td>
+                    <td><textarea placeholder="Are prices clear or hidden behind forms?"></textarea></td>
+                    <td><textarea placeholder="Are prices clear or hidden behind forms?"></textarea></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Beginner Guidance & FAQs</strong></td>
+                    <td><textarea placeholder="Do they explain what to bring/wear?"></textarea></td>
+                    <td><textarea placeholder="Do they explain what to bring/wear?"></textarea></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Major UX Gap / Opportunity</strong></td>
+                    <td><textarea placeholder="What did they do poorly?"></textarea></td>
+                    <td><textarea placeholder="What did they do poorly?"></textarea></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ===================================================================
+           WEEK 4 TAB CONTENT
+           =================================================================== -->
+      <section id="week4" class="tab-panel">
+        <div class="activity-card">
+          <div class="activity-header">
+            <div class="meta-row">
+              <span class="week-tag">Week 4</span>
+              <span class="duration-tag">⏱️ 50 Minutes</span>
+              <span class="format-tag">🧠 Synthesis & Persona Creation</span>
+            </div>
+            <h2>Activity: User Personas & Problem Definition</h2>
+            <p class="goal-box">🎯 <strong>Goal:</strong> Synthesize Weeks 1–3 research into a realistic User Persona and actionable Problem Statement (POV) that guides your site architecture.</p>
+          </div>
+
+          <div class="instruction-steps">
+            <h3>📋 Persona Building Guidance</h3>
+            <p>A <strong>User Persona</strong> is a fictional representation of your ideal user based on real secondary research data, not guesses. Use your research findings from Week 2 and Week 3 to build a persona profile for a beginner fitness customer.</p>
+          </div>
+
+          <div class="worksheet-section">
+            <div class="worksheet-header">
+              <h3>📝 Student Persona Card Template</h3>
+            </div>
+
+            <div class="persona-card-grid">
+              <div class="persona-profile-side">
+                <div class="avatar-circle">👤</div>
+                <div class="form-group">
+                  <label>Persona Name:</label>
+                  <input type="text" class="form-input" placeholder="e.g., Hesitant Hannah">
+                </div>
+                <div class="form-group">
+                  <label>Age & Occupation:</label>
+                  <input type="text" class="form-input" placeholder="e.g., 28, Accountant">
+                </div>
+                <div class="form-group">
+                  <label>Fitness Background:</label>
+                  <input type="text" class="form-input" placeholder="e.g., Has not exercised in 2 years">
+                </div>
+              </div>
+
+              <div class="persona-details-side">
+                <div class="form-group">
+                  <label>User Goals (What do they want to achieve?):</label>
+                  <textarea placeholder="e.g., Wants to build stamina, try yoga without feeling silly, clear pricing..."></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>User Pain Points & Anxieties (What stops them?):</label>
+                  <textarea placeholder="e.g., Fears going into the wrong studio room, hidden renewal fees, fitness jargon..."></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Key Website Features Needed to Convert Them:</label>
+                  <textarea placeholder="e.g., 'What to Expect' video, Sweat Scale filter (1-5), transparent pricing table..."></textarea>
+                </div>
               </div>
             </div>
 
-            <div class="timeline-step">
-              <span class="step-num">2</span>
-              <div>
-                <strong>05:00 - 15:00 — Share & Select</strong>
-                <p>In groups of 4, share examples and pick one problem statement. Avoid suggesting a solution at this stage!</p>
-              </div>
-            </div>
-
-            <div class="timeline-step">
-              <span class="step-num">3</span>
-              <div>
-                <strong>15:00 - 27:00 — Be a UX Detective</strong>
-                <p>Investigate: <strong>WHO</strong> is experiencing it? <strong>WHAT</strong> are they trying to do? <strong>WHERE</strong> does it occur? <strong>WHY</strong> is it hard? <strong>IMPACT?</strong></p>
-              </div>
-            </div>
-
-            <div class="timeline-step">
-              <span class="step-num">4</span>
-              <div>
-                <strong>27:00 - 37:00 — What Would You Need to Know?</strong>
-                <p>Identify 3 questions to investigate if this is a real problem for others. Put yourself in the user's shoes.</p>
-              </div>
-            </div>
-
-            <div class="timeline-step">
-              <span class="step-num">5</span>
-              <div>
-                <strong>37:00 - 47:00 — Quick Share</strong>
-                <p>Present: Our problem, user, goal, what we don't know, and how we could investigate it.</p>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- Worksheet 1 -->
-        <div class="worksheet-wrapper">
-          <h3>📝 Week 1 Group Worksheet</h3>
-          
-          <div class="worksheet-part">
-            <label class="field-label">1. Selected Problem Statement:</label>
-            <textarea placeholder="e.g., Users struggle to find the return policy on an online fashion shop."></textarea>
-          </div>
-
-          <div class="reflection-grid">
-            <div class="reflection-card">
-              <label>WHO is affected?</label>
-              <textarea placeholder="Target user group..."></textarea>
-            </div>
-            <div class="reflection-card">
-              <label>WHAT is their goal?</label>
-              <textarea placeholder="What are they trying to do?..."></textarea>
-            </div>
-            <div class="reflection-card">
-              <label>WHERE does it occur?</label>
-              <textarea placeholder="Page or interaction stage..."></textarea>
-            </div>
-            <div class="reflection-card">
-              <label>IMPACT on the user?</label>
-              <textarea placeholder="Frustration, abandonment, etc..."></textarea>
+            <div class="form-group" style="margin-top: 2rem;">
+              <h4>Final Point of View (POV) Problem Statement</h4>
+              <p><small>Format: <strong>[User Persona]</strong> needs a way to <strong>[User Need]</strong> because <strong>[Uncovered Insight]</strong>.</small></p>
+              <textarea placeholder="e.g., Beginner fitness customers need a way to preview studio etiquette and class intensity online because unexpected studio rules and elite environments create high anxiety before booking." style="min-height:80px;"></textarea>
             </div>
           </div>
         </div>
-      </article>
-
-      <!-- ==========================================
-           WEEK 2 ACTIVITY CARD
-           ========================================== -->
-      <article id="week2" class="activity-card">
-        <div class="activity-header">
-          <div class="meta-row">
-            <span class="week-tag">Week 2</span>
-            <span class="duration-tag">⏱️ 50 Mins</span>
-            <span class="format-tag">👥 Group & Peer Exercise</span>
-          </div>
-          <h2>Activity: Research Practice (Beginner Fitness Studio)</h2>
-          <p class="goal-text">🎯 <strong>Goal:</strong> Discover user needs, concerns, and expectations before jumping into code or design using secondary research and classmate polling.</p>
-        </div>
-
-        <div class="scenario-box">
-          <h3>📍 Scenario</h3>
-          <p>You are designing a booking and membership website for a local fitness studio catering specifically to <strong>beginners</strong>. Answer: <em>What do beginner customers actually need from the service and the website?</em></p>
-        </div>
-
-        <div class="worksheet-wrapper">
-          <h3>📝 Secondary Research & Insight Worksheet</h3>
-          <div class="table-responsive">
-            <table class="activity-table">
-              <thead>
-                <tr>
-                  <th>1. What did we find?</th>
-                  <th>2. What does this tell us about users?</th>
-                  <th>3. Design Implication for Website</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><textarea placeholder="Secondary research quote or finding..."></textarea></td>
-                  <td><textarea placeholder="Underlying need, fear, or expectation..."></textarea></td>
-                  <td><textarea placeholder="Proposed layout, feature, or content solution..."></textarea></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </article>
-
-      <!-- ==========================================
-           WEEK 3 ACTIVITY CARD
-           ========================================== -->
-      <article id="week3" class="activity-card">
-        <div class="activity-header">
-          <div class="meta-row">
-            <span class="week-tag">Week 3</span>
-            <span class="duration-tag">⏱️ 50 Mins</span>
-            <span class="format-tag">💻 Secondary Research & Audit</span>
-          </div>
-          <h2>Activity: Competitor Benchmarking & UI Auditing</h2>
-          <p class="goal-text">🎯 <strong>Goal:</strong> Analyze existing beginner-focused fitness studio websites to identify design patterns, strengths, and user experience gaps.</p>
-        </div>
-
-        <div class="scenario-box">
-          <h3>📍 Scenario & Objective</h3>
-          <p>Before creating a new design, UX researchers conduct a <strong>Competitor Audit</strong>. Examine 2 existing local or national fitness studio websites to see how they onboard beginners.</p>
-        </div>
-
-        <div class="worksheet-wrapper">
-          <h3>📝 Competitor Analysis Worksheet</h3>
-          
-          <div class="table-responsive">
-            <table class="activity-table">
-              <thead>
-                <tr>
-                  <th style="width: 20%;">Audit Criteria</th>
-                  <th style="width: 40%;">Competitor Site A</th>
-                  <th style="width: 40%;">Competitor Site B</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Studio / Brand Name</strong></td>
-                  <td><textarea placeholder="Site A Name & URL..."></textarea></td>
-                  <td><textarea placeholder="Site B Name & URL..."></textarea></td>
-                </tr>
-                <tr>
-                  <td><strong>First Impression for Beginners</strong><br><small>Is it welcoming or intimidating?</small></td>
-                  <td><textarea placeholder="Observations on imagery, tone, messaging..."></textarea></td>
-                  <td><textarea placeholder="Observations on imagery, tone, messaging..."></textarea></td>
-                </tr>
-                <tr>
-                  <td><strong>Pricing Transparency</strong><br><small>Are prices visible without signing up?</small></td>
-                  <td><textarea placeholder="How easy is it to find prices?"></textarea></td>
-                  <td><textarea placeholder="How easy is it to find prices?"></textarea></td>
-                </tr>
-                <tr>
-                  <td><strong>Class Descriptions</strong><br><small>Do they state difficulty levels or what to bring?</small></td>
-                  <td><textarea placeholder="Are beginner classes clearly flagged?"></textarea></td>
-                  <td><textarea placeholder="Are beginner classes clearly flagged?"></textarea></td>
-                </tr>
-                <tr>
-                  <td><strong>Key UX Gap / Missed Opportunity</strong></td>
-                  <td><textarea placeholder="What is confusing or missing?"></textarea></td>
-                  <td><textarea placeholder="What is confusing or missing?"></textarea></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </article>
-
-      <!-- ==========================================
-           WEEK 4 ACTIVITY CARD
-           ========================================== -->
-      <article id="week4" class="activity-card">
-        <div class="activity-header">
-          <div class="meta-row">
-            <span class="week-tag">Week 4</span>
-            <span class="duration-tag">⏱️ 50 Mins</span>
-            <span class="format-tag">🧠 Synthesis & Persona Building</span>
-          </div>
-          <h2>Activity: User Personas & Problem Definition</h2>
-          <p class="goal-text">🎯 <strong>Goal:</strong> Transform secondary findings and competitor insights into a realistic User Persona and core Problem Statement for your web project.</p>
-        </div>
-
-        <div class="worksheet-wrapper">
-          <h3>📝 User Persona Profile Card</h3>
-
-          <div class="persona-builder">
-            <div class="persona-sidebar">
-              <div class="avatar-placeholder">👤</div>
-              <input type="text" class="form-input" placeholder="Persona Name (e.g., Nervous Nina)">
-              <input type="text" class="form-input" placeholder="Age / Occupation">
-              <input type="text" class="form-input" placeholder="Fitness Experience Level">
-            </div>
-
-            <div class="persona-main">
-              <div class="worksheet-part">
-                <label class="field-label">Goals & Motivations (What do they want?)</label>
-                <textarea placeholder="e.g., Wants to start exercising twice a week without feeling judged by experienced athletes..."></textarea>
-              </div>
-
-              <div class="worksheet-part">
-                <label class="field-label">Frustrations & Anxieties (What stops them?)</label>
-                <textarea placeholder="e.g., Fears entering a studio class late, not knowing equipment terms, hidden subscription fees..."></textarea>
-              </div>
-            </div>
-          </div>
-
-          <div class="worksheet-part" style="margin-top: 1.5rem;">
-            <h3>Final Problem Statement (Point of View)</h3>
-            <p class="instruction">Fill in the blanks: <strong>[User Persona]</strong> needs a way to <strong>[User Need]</strong> because <strong>[Insight/Uncovered Friction]</strong>.</p>
-            <textarea placeholder="e.g., First-time gym goers need a way to preview class etiquette and equipment online because unexpected studio rules create high anxiety before their first visit." style="min-height: 70px;"></textarea>
-          </div>
-        </div>
-      </article>
-
-      <!-- Placeholder for Future Weeks -->
-      <div class="future-card">
-        <h3>🚀 Weeks 5–10 Modules</h3>
-        <p>Upcoming exercises in Wireframing, Information Architecture, Accessibility Auditing, and Usability Testing will be published here weekly.</p>
-      </div>
+      </section>
 
     </main>
   </div>
@@ -301,14 +615,20 @@
     </div>
   </footer>
 
-  <!-- Simple Tab Switching Script -->
+  <!-- Tab Switching Script -->
   <script>
-    document.querySelectorAll('.week-nav .nav-btn').forEach(button => {
-      button.addEventListener('click', function(e) {
-        if (this.classList.contains('disabled')) return;
-        
-        document.querySelectorAll('.week-nav .nav-btn').forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
+    document.querySelectorAll('.tab-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        if (button.classList.contains('disabled')) return;
+
+        // Deactivate all tab buttons and panels
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+
+        // Activate selected tab and corresponding panel
+        button.classList.add('active');
+        const targetTab = button.getAttribute('data-tab');
+        document.getElementById(targetTab).classList.add('active');
       });
     });
   </script>

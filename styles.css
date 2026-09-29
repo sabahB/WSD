@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Base Variables & Layout Reset
+   Base Styles & Design System
    ========================================================================== */
 :root {
   --primary: #2563eb;
@@ -9,7 +9,7 @@
   --card-bg: #ffffff;
   --text-main: #0f172a;
   --text-muted: #64748b;
-  --border: #e2e8f0;
+  --border: #cbd5e1;
   --accent-box: #f1f5f9;
   --radius: 12px;
   --font: 'Inter', system-ui, -apple-system, sans-serif;
@@ -21,10 +21,6 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--font);
   background-color: var(--bg);
@@ -34,7 +30,7 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -71,221 +67,283 @@ body {
 }
 
 /* ==========================================================================
-   Two-Column Grid Layout (Sidebar + Content)
+   Horizontal Tab Navigation Bar
    ========================================================================== */
-.layout-wrapper {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-/* Sidebar Navigation */
-.sidebar {
-  position: sticky;
-  top: 1.5rem;
-}
-
-.sidebar-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-}
-
-.sidebar-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
-  color: #334155;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.5rem;
-}
-
-.week-nav {
+.tab-navigation {
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
+  overflow-x: auto;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 2rem;
+  padding-bottom: 0.25rem;
 }
 
-.nav-btn {
-  display: block;
-  padding: 0.6rem 0.8rem;
-  border-radius: 6px;
-  color: var(--text-main);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.2s;
-  background-color: transparent;
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
-.nav-btn span {
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.nav-btn:hover:not(.disabled) {
+.tab-btn:hover:not(.disabled) {
   background-color: var(--primary-light);
   color: var(--primary-dark);
 }
 
-.nav-btn.active {
+.tab-btn.active {
   background-color: var(--primary);
   color: #ffffff;
 }
 
-.nav-btn.active span {
-  color: #ffffff;
-}
-
-.future-weeks {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px dashed var(--border);
-}
-
-.nav-btn.disabled {
+.tab-btn.disabled {
   color: #cbd5e1;
   cursor: not-allowed;
 }
 
-.nav-btn.disabled span {
-  color: #cbd5e1;
-}
-
 /* ==========================================================================
-   Activity Cards
+   Tab Panel Switching
    ========================================================================== */
-.content-area {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+.tab-panel {
+  display: none; /* Hidden by default */
 }
 
+.tab-panel.active {
+  display: block; /* Visible when active */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Activity Card */
 .activity-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 2.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  scroll-margin-top: 2rem;
 }
 
 .meta-row {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .week-tag {
   background-color: var(--primary);
   color: #ffffff;
   font-weight: 700;
-  font-size: 0.75rem;
-  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 4px;
 }
 
 .duration-tag, .format-tag {
   background-color: var(--accent-box);
   color: var(--text-muted);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.2rem 0.5rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 4px;
 }
 
 .activity-header h2 {
-  font-size: 1.6rem;
+  font-size: 1.85rem;
   color: #0f172a;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.goal-text {
+.goal-box {
   background-color: #f0fdf4;
   border: 1px solid #bbf7d0;
   color: #166534;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1.25rem;
   border-radius: 8px;
   font-size: 0.95rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .scenario-box {
   background-color: var(--primary-light);
   border-left: 4px solid var(--primary);
-  padding: 1.25rem;
+  padding: 1.25rem 1.5rem;
   border-radius: 0 var(--radius) var(--radius) 0;
-  margin-bottom: 1.5rem;
-}
-
-/* Timeline */
-.timeline-section {
   margin-bottom: 2rem;
 }
 
-.timeline-section h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
+/* Instructions & Steps */
+.instruction-steps {
+  margin-bottom: 2.5rem;
 }
 
-.timeline-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.75rem;
-}
-
-.timeline-step {
-  display: flex;
-  gap: 0.6rem;
-  background-color: var(--accent-box);
-  padding: 0.85rem;
-  border-radius: 8px;
-}
-
-.step-num {
-  background-color: var(--primary);
-  color: #ffffff;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.75rem;
-  flex-shrink: 0;
-}
-
-.timeline-step p {
-  font-size: 0.825rem;
-  color: var(--text-muted);
-}
-
-/* ==========================================================================
-   Worksheets & Tables
-   ========================================================================== */
-.worksheet-wrapper {
-  border-top: 2px dashed var(--border);
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.worksheet-part {
+.instruction-steps h3 {
+  font-size: 1.3rem;
   margin-bottom: 1.25rem;
 }
 
-.field-label {
+.step-card {
+  background-color: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.step-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.step-badge {
+  background-color: #0f172a;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.step-title h4 {
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.examples-box, .checklist-box {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.examples-box ul, .checklist-box ul {
+  margin-left: 1.25rem;
+  margin-top: 0.4rem;
+}
+
+.example-callout {
+  background-color: #fefce8;
+  border-left: 4px solid #f59e0b;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  margin: 0.75rem 0;
+  color: #78350f;
+}
+
+.warning-text {
+  color: #dc2626;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+.detective-list {
+  margin-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.worked-example {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.worked-example h5 {
+  color: #1e40af;
+  margin-bottom: 0.4rem;
+}
+
+.presentation-script {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Timeline Components */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.time-block {
+  border-left: 3px solid var(--primary);
+  padding-left: 1.25rem;
+}
+
+.time-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.time-badge {
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Worksheet Form Fields */
+.worksheet-section {
+  border-top: 2px dashed var(--border);
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+}
+
+.worksheet-header {
+  margin-bottom: 1.5rem;
+}
+
+.worksheet-part {
+  margin-bottom: 2rem;
+}
+
+.worksheet-part h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
   font-weight: 600;
   font-size: 0.9rem;
-  display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .form-input {
   width: 100%;
-  padding: 0.6rem;
+  padding: 0.7rem 0.8rem;
   border: 1px solid var(--border);
   border-radius: 6px;
   font-family: var(--font);
@@ -295,12 +353,12 @@ body {
 
 textarea {
   width: 100%;
-  min-height: 70px;
-  padding: 0.6rem;
+  min-height: 75px;
+  padding: 0.7rem;
   border: 1px solid var(--border);
   border-radius: 6px;
   font-family: var(--font);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   resize: vertical;
 }
 
@@ -310,6 +368,7 @@ textarea:focus, .form-input:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
+/* Tables */
 .table-responsive {
   overflow-x: auto;
 }
@@ -317,12 +376,12 @@ textarea:focus, .form-input:focus {
 .activity-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .activity-table th {
   background-color: var(--accent-box);
-  padding: 0.6rem;
+  padding: 0.75rem;
   font-size: 0.85rem;
   font-weight: 600;
   border: 1px solid var(--border);
@@ -331,65 +390,43 @@ textarea:focus, .form-input:focus {
 
 .activity-table td {
   border: 1px solid var(--border);
-  padding: 0.4rem;
+  padding: 0.5rem;
   vertical-align: top;
 }
 
-/* Persona Builder */
-.persona-builder {
+.detective-grid, .reflection-grid {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 1.25rem;
-  background-color: #fafafa;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Personas */
+.persona-card-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.5rem;
+  background-color: #f8fafc;
   border: 1px solid var(--border);
-  padding: 1.25rem;
+  padding: 1.5rem;
   border-radius: 8px;
 }
 
-.persona-sidebar {
+.persona-profile-side {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
 }
 
-.avatar-placeholder {
-  font-size: 3rem;
+.avatar-circle {
+  font-size: 3.5rem;
   background-color: #e2e8f0;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.reflection-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.75rem;
-}
-
-.reflection-card {
-  border: 1px solid var(--border);
-  padding: 0.75rem;
-  border-radius: 6px;
-}
-
-.reflection-card label {
-  font-weight: 600;
-  font-size: 0.8rem;
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.future-card {
-  background-color: #f1f5f9;
-  border: 2px dashed #cbd5e1;
-  border-radius: var(--radius);
-  padding: 2rem;
-  text-align: center;
-  color: var(--text-muted);
+  margin-bottom: 1rem;
 }
 
 .site-footer {
@@ -399,19 +436,12 @@ textarea:focus, .form-input:focus {
   margin-top: 3rem;
 }
 
-/* ==========================================================================
-   Responsive Design
-   ========================================================================== */
-@media (max-width: 850px) {
-  .layout-wrapper {
+/* Responsive */
+@media (max-width: 768px) {
+  .persona-card-grid {
     grid-template-columns: 1fr;
   }
-  
-  .sidebar {
-    position: static;
-  }
-  
-  .persona-builder {
-    grid-template-columns: 1fr;
+  .activity-card {
+    padding: 1.25rem;
   }
 }
